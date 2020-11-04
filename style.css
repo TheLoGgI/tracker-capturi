@@ -3,14 +3,21 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 button, 
 input[type="submit"],
 input[type="button"] {
-    color: black;
-    background-color: #FDE698;
+    color: white;
+    background-color: #745AF2;
     border: none;
     border-radius: 3px;
     padding: .5em 1em;
+    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 .hidden {
@@ -29,11 +36,14 @@ input[type="button"] {
 
 .head-nav {
     width: 100%;
-    background-color: #e0e0e0;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1em 0em;
     border-radius: 3px;
+}
+
+.filter input {
+    font-size: 1.2rem;
 }
 
 .tracker-inputs {
@@ -61,6 +71,10 @@ input[type="button"] {
 
 .input-tracker input {
     max-width: 200px;
+    font-size: 1.2rem;
+    
+    margin: .2em 1em 0 0;
+    
 }
 
 
@@ -82,8 +96,10 @@ input[type="button"] {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: .6em 1em;
-    border: 2px solid black;
+    padding: 0em 1em;
+    background-color: #FDE698;
+    border-radius: 4px;
+    /* border: 2px solid black; */
     margin: 1em 0;
 }
 

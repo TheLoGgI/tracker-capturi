@@ -34,9 +34,9 @@ document.getElementById('formtracker').addEventListener('submit', e => {
     e.preventDefault()
 
     const trackerName = document.getElementById('nametracker').value
-    
+    console.log(trackedList);
     createTracker(trackerName, trackerList)
-    
+    console.log(trackedList);
     displayList(trackedList)
 
     trackerList.length = 0
@@ -49,12 +49,16 @@ document.getElementById('formtracker').addEventListener('submit', e => {
 // Add "tracker words" to tracker
 document.getElementById('wordTrackerInput').addEventListener('click', e => {
     let addTrackWord = document.getElementById('wordtracker').value
-    trackerList.push(addTrackWord)
+    
+    if (addTrackWord !== '') {
+        trackerList.push(addTrackWord)
+
+        const htmlstring = `<div class="tracked">${addTrackWord}</div>`
+    
+        document.getElementById('trackedWords').insertAdjacentHTML('afterbegin', htmlstring)
+    }
     
 
-    const htmlstring = `<div class="tracked">${addTrackWord}</div>`
-
-    document.getElementById('trackedWords').insertAdjacentHTML('afterbegin', htmlstring)
     document.getElementById('wordtracker').value = ''
 })
 
@@ -87,7 +91,9 @@ document.getElementById('filterTrackers').addEventListener('keyup', e=> {
 // Display function for tracker list items
 function displayList(list) {
     let htmlstring = ''
+    // console.log(list);
     for (const prop of list) {
+        // console.log(prop.trackerList);
         htmlstring += `
         <div class="tracker-item" data-id="${prop.id}">
             <p>${prop.name}</p>
@@ -130,10 +136,11 @@ function removeTracker(e) {
 
 // Creates a tracker object in trackedList 
 function createTracker(name, trackerList) {
+    console.log(trackerList);
     trackedList.push({
         id: gen.next().value,
         name,
-        trackerList
+        trackerList: [...trackerList]
     })
 }
 // Creates string with (-)  
