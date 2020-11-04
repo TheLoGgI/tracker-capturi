@@ -1,0 +1,92 @@
+
+* {
+    box-sizing: border-box;
+}
+
+button, 
+input[type="submit"],
+input[type="button"] {
+    color: black;
+    background-color: #FDE698;
+    border: none;
+    border-radius: 3px;
+    padding: .5em 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.remove {
+    width: 20px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.head-nav {
+    width: 100%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-radius: 3px;
+}
+
+.tracker-inputs {
+    display: flex;
+}
+
+.add-tracker {
+    width: 100%;
+    background-color: #cacaca;
+    border-radius: 3px;
+    padding: 1em;
+    /* margin: 0 auto; */
+}
+
+.add-tracker-input {
+    margin-left: 2em;
+    display: flex;
+    align-items: flex-end
+}
+
+.input-tracker {
+    display: inline-flex;
+    flex-flow: column nowrap;
+}
+
+.input-tracker input {
+    max-width: 200px;
+}
+
+
+.tracked-words {
+    margin: 3em 0;
+}
+
+.tracked {
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0.3em .6em;
+    background-color: #745AF2;
+    color: white;
+    margin-right: .5em;
+}
+
+
+.tracker-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .6em 1em;
+    border: 2px solid black;
+    margin: 1em 0;
+}
+
+.tracker-item-list {
+    opacity: .8;
+}

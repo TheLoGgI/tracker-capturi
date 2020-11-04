@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title></title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="head-nav">
+            <button id="addtracker">Tilføj tracker</button>
+            
+            <div class="filter">
+                <label for="filterTrackers">Søg</label>
+                <input id="filterTrackers" type="text" placeholder="Navn eller Længde">
+            </div>
+        </div>
+
+        <form id="formtracker" class="add-tracker">
+            <div class="tracker-inputs">
+                <div class="name-input  input-tracker">
+                    <label for="nametracker">Navn på tracker</label>
+                    <input type="text" name="nametracker" id="nametracker" required>
+                </div>
+                <div class="add-tracker-input">
+                    <div class="input-tracker">
+                        <label for="wordtracker">Tilføj ord til tracker</label>
+                        <input type="text" name="wordtracker" id="wordtracker">
+                    </div>
+                    <input type="button" id="wordTrackerInput" value="Tilføj ord" required>
+                </div>
+
+            </div>
+
+            <div class="tracked-words">
+                <p>Tracked ord</p>
+                <div id="trackedWords" class="tracked-word">
+                    
+                </div>
+
+            </div>
+
+            <input type="submit" id="submitTracker" value="Tilføj Tracker"></input>
+        </form>
+
+        <div id="trackerList" class="trackers-list">
+            <div class="tracker-item">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
