@@ -36,9 +36,11 @@ document.getElementById('formtracker').addEventListener('submit', e => {
     const trackerName = document.getElementById('nametracker').value
     
     createTracker(trackerName, trackerList)
-
+    
     displayList(trackedList)
 
+    trackerList.length = 0
+    trackedWords.innerHTML = ''
     e.target.reset()
 
     removeHandlerEvent()
@@ -46,12 +48,14 @@ document.getElementById('formtracker').addEventListener('submit', e => {
 
 // Add "tracker words" to tracker
 document.getElementById('wordTrackerInput').addEventListener('click', e => {
-    const addTrackWord = document.getElementById('wordtracker').value
+    let addTrackWord = document.getElementById('wordtracker').value
     trackerList.push(addTrackWord)
+    
 
     const htmlstring = `<div class="tracked">${addTrackWord}</div>`
 
     document.getElementById('trackedWords').insertAdjacentHTML('afterbegin', htmlstring)
+    document.getElementById('wordtracker').value = ''
 })
 
 
